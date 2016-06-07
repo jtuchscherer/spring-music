@@ -2,6 +2,13 @@
 applications:
 - name: spring-music
   memory: 1G
-  random-route: true
+  instances: 1
+  host: spring-music-unjesting-popularity
   path: build/libs/spring-music.jar
-
+  env:
+    JAVA_OPTS: >
+      -Djava.rmi.server.hostname=127.0.0.1
+      -Dcom.sun.management.jmxremote.authenticate=false
+      -Dcom.sun.management.jmxremote.ssl=false
+      -Dcom.sun.management.jmxremote.port=5000
+      -Dcom.sun.management.jmxremote.rmi.port=5000
