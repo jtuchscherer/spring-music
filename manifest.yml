@@ -11,3 +11,7 @@ applications:
       -Dcom.sun.management.jmxremote.ssl=false
       -Dcom.sun.management.jmxremote.port=5000
       -Dcom.sun.management.jmxremote.rmi.port=5000
+      -XX:NativeMemoryTracking=summary
+      -XX:+PrintHeapAtGC
+      -XX:+PrintGCDetails
+      -XX:+PrintGCTimeStamps

@@ -1,5 +1,9 @@
-Spring Music
+Spring Music with NMT Debugging enaled
 ============
+
+This fork of [Spring Music](https://github.com/cloudfoundry-samples/spring-music) has NMT metrics added to the Spring Actuator endpoint inspired by [nmt-metrics](https://github.com/mcabaj/nmt-metrics) 
+
+It also has an additional endpoint: /errors/oom to trigger an oom exception.
 
 This is a sample application for using database services on [Cloud Foundry](http://cloudfoundry.org) with the [Spring Framework](http://spring.io) and [Spring Boot](http://projects.spring.io/spring-boot/).
 

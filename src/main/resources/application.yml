@@ -7,4 +7,19 @@ spring:
 # turn off the security on the actuator end points as this is a demo app
 management:
   security:
-    enabled: false
+    enabled: true
+    roles: SUPERUSER
+
+security:
+  user:
+    name: admin
+
+
+nmt:
+  metrics:
+    enabled: true
+
+
+logging:
+  level:
+    root: INFO
