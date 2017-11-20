@@ -39,6 +39,8 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-data-mongodb"
     compile "org.springframework.boot:spring-boot-starter-data-redis"
     compile "org.springframework.boot:spring-boot-starter-security"
+    compile "org.springframework.boot:spring-boot-starter-hateoas"
+    compile 'org.springframework.data:spring-data-rest-hal-browser'
 
     // Spring Cloud Connectors
     compile "org.springframework.cloud:spring-cloud-core:${springCloudConnectorsVersion}"
