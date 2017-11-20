@@ -20,7 +20,7 @@ endpoints:
 
 nmt:
   metrics:
-    enabled: true
+    enabled: ${nmt-enabled:false}
 
 
 logging:
