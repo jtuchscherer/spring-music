@@ -41,4 +41,28 @@ public class ErrorController {
             Thread.sleep(1000);
         }
     }
+
+    @RequestMapping(value = "/threadkill")
+    public void killThreads() throws InterruptedException {
+        logger.info("Starting threads until it ends");
+        logger.info("=================> Thread test started..");
+        for (int outerIterator = 1; outerIterator < 100000; outerIterator++) {
+            logger.info("Iteration " + outerIterator + " Free Mem: " + Runtime.getRuntime().freeMemory());
+            Thread thread = new MyThread();
+            thread.start();
+            Thread.sleep(10);
+        }
+    }
+}
+
+class MyThread extends Thread {
+    private static final Logger logger = LoggerFactory.getLogger(MyThread.class);
+
+    public void run() {
+        try {
+            Thread.sleep(600000);
+        } catch (InterruptedException e) {
+            logger.error("Thread was interrupted while sleeping", e);
+        }
+    }
 }
